@@ -1,0 +1,18 @@
+/* .quest{
+    column-count: 3;
+} */
+/* .test-interface{
+    padding-left: 10%;
+} */
+.prev-button{
+    float: left;
+    padding-left: 30%;
+}
+.next-button{
+    float: right;
+    padding-right: 30%;
+}
+.submit-button{
+    float: right;
+    padding-right: 30%;
+}
