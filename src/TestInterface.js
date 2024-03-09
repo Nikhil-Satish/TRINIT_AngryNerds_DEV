@@ -86,8 +86,8 @@ function TestInterface(){
                     {/* <Timer /> */}
                     <CountdownCircleTimer
                         isPlaying
-                        duration={70}
-                        size={90}
+                        duration={120}
+                        size={120}
                         colors={['#004777', '#F7B801', '#A30000', '#A30000']}
                         colorsTime={[300, 60, 15, 0]}
                         onComplete={handleSubmit}
