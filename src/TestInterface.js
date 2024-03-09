@@ -5,6 +5,8 @@ import './design/TestInterface.css'
 import Analysis from "./Analysis";
 // import Timer from "./Timer";
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+// import { MathJax } from "better-react-mathjax";
+import Latex from "react-latex";
 
 function TestInterface(){
     const [current_q, set_q] = useState(0);
@@ -75,7 +77,7 @@ function TestInterface(){
                     {/* <Timer /> */}
                     <CountdownCircleTimer
                         isPlaying
-                        duration={30}
+                        duration={70}
                         size={90}
                         colors={['#004777', '#F7B801', '#A30000', '#A30000']}
                         colorsTime={[300, 60, 15, 0]}
@@ -99,20 +101,20 @@ function TestInterface(){
                     <div className="test-interface">
                         <div className="quest">
                             <div className="crux">
-                                <p>{q_no}{questions_list[current_q].question}</p>
+                                {/* <Latex>{questions_list[current_q].question}</Latex> */}
+                                {/* <p>{q_no}{questions_list[current_q].question}</p> */}
+                                <p>{q_no}<Latex>{questions_list[current_q].question}</Latex></p>
                                 <br/>
                                 <ul className="options">
                                     {questions_list[current_q].options.map((option, optionIndex) => (
                                     <li key={optionIndex}>
-                                        {/* <label> */}
-                                        <input
-                                            type="radio"
-                                            id={optionIndex} 
-                                            value={option} 
-                                            checked={selected_value === optionIndex}
-                                            // checked={answers_entered[current_q] === optionIndex}
-                                            onChange={()=>handleRadioChange(optionIndex)}
-                                        />
+                                            <input
+                                                type="radio"
+                                                id={optionIndex} 
+                                                value={option} 
+                                                checked={selected_value === optionIndex}
+                                                onChange={()=>handleRadioChange(optionIndex)}
+                                            />
                                         {option}
                                         {/* </label> */}
                                     </li>
