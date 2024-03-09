@@ -29,7 +29,7 @@ def convert_text_to_tags(question_paper):
 
         for i, option in enumerate(question_option_answer['options']):
             temp = re.sub(text, result, option)
-            question_option_answer['options'][i] = f"<Latex>{{{temp}}}</Latex>"
+            question_option_answer['options'][i] = f"<Latex>{{\"{temp}\"}}</Latex>"
     
 def build_question_paper(file_url):
     question_paper = []
