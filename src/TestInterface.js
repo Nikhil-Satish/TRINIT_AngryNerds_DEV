@@ -95,8 +95,8 @@ function TestInterface(){
                     {/* <Timer /> */}
                     <CountdownCircleTimer
                         isPlaying
-                        duration={70}
-                        size={90}
+                        duration={120}
+                        size={120}
                         colors={['#004777', '#F7B801', '#A30000', '#A30000']}
                         colorsTime={[300, 60, 15, 0]}
                         onComplete={handleSubmit}
@@ -116,53 +116,55 @@ function TestInterface(){
                     </CountdownCircleTimer>
 
                 </div>
-                    <div className="test-interface">
-                        <div className="quest">
-                            <div className="crux">
-                                <p>{q_no}<Latex>{questions_list[current_q].question}</Latex></p>
-                                <br/>
-                                {questions_list[current_q].options.length === 0 &&
-                                    <input 
-                                        type="text"
-                                        value={enteredValue}
-                                        onChange={(e)=>setEnter(e.target.value)}
-                                    /> 
-                                }
-                                {questions_list[current_q].options.length !== 0 &&
-                                    <ul className="options">
-                                        {questions_list[current_q].options.map((option, optionIndex) => (
-                                        <li key={optionIndex}>
-                                                <input
-                                                    type="radio"
-                                                    id={optionIndex} 
-                                                    value={option} 
-                                                    checked={selected_value === optionIndex}
-                                                    onChange={()=>handleRadioChange(optionIndex)}
-                                                />
-                                            {option}
-                                            {/* </label> */}
-                                        </li>
-                                        ))}
-                                    </ul>
-                                }
-                            </div>
-                            <br/>
-                            <div className="prev-button">
-                                <button onClick={handlePrevClick} >Previous</button>
-                            </div>
-                            <div className="next-button">
-                                <button onClick={handleNextClick} >Save and Next</button>
-                                {/* <Button variant="primary">Primary</Button> */}
+                    <div className="d-flex flex-column container test-interface">
+                        <div className="mx-auto quest">
+                              <div className="question-box">
+                                  <div className="question">
+                                      <p>{q_no}<Latex>{questions_list[current_q].question}</Latex></p>
+                                  </div>
+
+                                  <div className="numerical">
+                                      {questions_list[current_q].options.length === 0 &&
+                                          <input 
+                                              type="text"
+                                              value={enteredValue}
+                                              onChange={(e)=>setEnter(e.target.value)}
+                                          /> 
+                                      }
+                                  </div>
+
+                                  <div className="options">
+                                      {questions_list[current_q].options.length !== 0 &&
+                                          <ul className="options">
+                                              {questions_list[current_q].options.map((option, optionIndex) => (
+                                              <li key={optionIndex} className="option">
+                                                      <input
+                                                          type="radio"
+                                                          id={optionIndex} 
+                                                          value={option} 
+                                                          checked={selected_value === optionIndex}
+                                                          onChange={()=>handleRadioChange(optionIndex)}
+                                                      />
+                                                  <label for={optionIndex}>
+                                                      {option}
+                                                  </label>
+                                              </li>
+                                              ))}
+                                          </ul>
+                                      }
+                                  </div>
+                              </div>
+
+                            <div className="navigation">
+                                <button className="btn btn-primary" onClick={handlePrevClick} >Previous</button>
+                                <button className="btn btn-success" onClick={handleNextClick} >Save and Next</button>
                                 {/* <Analysis anslist="Lolol" /> */}
                             </div>
                             
                         </div>
-                        <br/>
-                        <br/>
 
-                        <div className="submit-button">
-                            <button onClick={handleSubmit} >Submit</button>
-                            {/* <button type="button" class="btn btn-primary">Primary</button> */}
+                        <div className="submit-button mx-auto">
+                            <button className="btn btn-danger" onClick={handleSubmit} >Submit</button>
                         </div>
                     </div>
                 </div>
@@ -170,8 +172,6 @@ function TestInterface(){
             }
             {submitted && <Analysis anslist={answers_entered} />}
         </div>
-        
-        
     )
 }
 
