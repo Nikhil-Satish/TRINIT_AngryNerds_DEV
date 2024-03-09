@@ -136,8 +136,9 @@ function TestInterface(){
                                                           checked={selected_value === optionIndex}
                                                           onChange={()=>handleRadioChange(optionIndex)}
                                                       />
-                                                  {option}
-                                                  {/* </label> */}
+                                                  <label for={optionIndex}>
+                                                      {option}
+                                                  </label>
                                               </li>
                                               ))}
                                           </ul>
@@ -162,8 +163,6 @@ function TestInterface(){
             }
             {submitted && <Analysis anslist={answers_entered} />}
         </div>
-        
-        
     )
 }
 

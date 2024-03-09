@@ -42,13 +42,25 @@ function Analysis(props){
       }, []);
 
     return(
-        <div>
-            {/* <p>No. of questions answered correctly={correctly_ans}</p>
-            <p>No. of questions answered incorrectly={incorrectly_ans}</p>
-            <p>No. of questions not answered={unatt}</p> */}
-            <p>Positive Score: {correctly_ans*4}</p>
-            <p>Negative Score: {incorrectly_ans*-1}</p>
-            <p>Total score: {correctly_ans*4-incorrectly_ans*1}</p>
+        <div className="container table-responsive">
+            <table className="mx-auto table w-auto table-bordered">
+                <tbody>
+                    <tr className="table-info">
+                        <th scope="row">Postive Score</th>
+                        <td>{correctly_ans*4}</td>
+                    </tr>
+
+                    <tr className="table-danger">
+                        <th scope="row">Negative Score</th>
+                        <td>{incorrectly_ans*-1}</td>
+                    </tr>
+
+                    <tr className="table-success">
+                        <th scope="row">Total Score</th>
+                        <td>{correctly_ans*4-incorrectly_ans}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     )
 }
