@@ -4,6 +4,7 @@ import { questions_list } from "./Questions";
 
 function Analysis(props){
     const answer_entered = props.anslist;
+    console.log(answer_entered);
     const [correctly_ans, setCorrectly] = useState(0);
     const [incorrectly_ans, setIncorrectly] = useState(0);
     const [unatt, setUnat] = useState(0);

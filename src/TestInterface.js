@@ -17,7 +17,7 @@ function TestInterface(){
         anslist.push(5);
         ts.push(0);
     }
-    const [isNumerical, setNume] = useState(false);
+    // const [isNumerical, setNume] = useState(questions_list[current_q].options === 0);
     const [enteredValue, setEnter] = useState("");
     const [answers_entered, setAnswers] = useState(anslist);
     // const [time_spent, setTimeSpent] = useState(ts);
@@ -27,7 +27,13 @@ function TestInterface(){
     const changeAnswers = () =>{
         const newAnswer = answers_entered.map((c, i) => {
             if (i === current_q) {
-              return selected_value;
+                if(enteredValue !== ""){
+                    return enteredValue;
+                }
+                else{
+                    // console.log("Hola");
+                    return selected_value;
+                }
             } else {
               return c;
             }
@@ -39,6 +45,7 @@ function TestInterface(){
 
     const handleNextClick = () =>{
         setSelected(5);
+        setEnter("");
         changeAnswers();
         // setSelected(answers_entered[current_q])
         if(current_q<questions_list.length-1){
@@ -51,6 +58,7 @@ function TestInterface(){
 
     const handlePrevClick = () =>{
         setSelected(5);
+        setEnter("");
         changeAnswers();
         // setSelected(answers_entered[current_q])
         if(current_q>0){
@@ -66,7 +74,7 @@ function TestInterface(){
 
     const handleSubmit = () =>{
         // anslist = answers_entered;
-        console.log(answers_entered);
+        // console.log(answers_entered);
         setSubmit(true);
     }
 
