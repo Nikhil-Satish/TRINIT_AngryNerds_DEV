@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.inter{
+  padding-top: 10%;
+}
+.timer{
+  float: right;
+  padding-right: 10%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

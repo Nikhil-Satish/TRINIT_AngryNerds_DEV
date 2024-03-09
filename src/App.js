@@ -2,13 +2,21 @@
 import React from 'react';
 import Timer from './Timer';
 // import TestInterface from './TestInterface';
+import { TestInterface } from './TestInterface';
+import './design/App.css'
 
 function App() {
   return (
     <div className="App">
-      <h1>Online Testing Platform</h1>
-      <Timer />
-      {/* <TestInterface /> */}
+      <h2>Online Testing Platform</h2>
+      <div className='main-area'>
+        <div className='timer'>
+          <Timer />
+        </div>
+        <div className='inter' >
+          <TestInterface />
+        </div>
+      </div>
     </div>
   );
 }
