@@ -3,7 +3,7 @@ import subprocess
 import sys
 
 def detect_tex():
-    for dirname, _, filenames in os.walk('./output'):
+    for dirname, _, filenames in os.walk('./zip'):
         if len(filenames) == 0:
             continue
 
