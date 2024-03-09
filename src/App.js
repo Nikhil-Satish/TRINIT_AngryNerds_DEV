@@ -1,7 +1,8 @@
 // App.js
 import React from 'react';
 import Timer from './Timer';
-import TestInterface from './TestInterface';
+// import TestInterface from './TestInterface';
+import { TestInterface } from './TestInterface';
 import './design/App.css'
 
 function App() {

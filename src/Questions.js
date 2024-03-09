@@ -4,7 +4,7 @@ export const questions_list = [
         options:["2020","2021","2022","2023"]
     },
     {
-        question:"Demo ques",
-        options:["a","b","c","d"]
+        question:"Who was the first person to step on moon?",
+        options:["Neil Armstrong","Buzz Alderin","Sarojini Naidu","Albert Einstein"]
     }
 ]
