@@ -1,0 +1,17 @@
+[
+   {
+      "question": "Which among the following is forward biased:\n",
+      "options": [
+         "\\begin{center}\n\\includegraphics[max width=\\textwidth]{2024_03_08_77386ce5bfd05109325bg-01(2)}\n\\end{center}",
+         "\\begin{center}\n\\includegraphics[max width=\\textwidth]{2024_03_08_77386ce5bfd05109325bg-01(1)}\n\\end{center}",
+         "\\begin{center}\n\\includegraphics[max width=\\textwidth]{2024_03_08_77386ce5bfd05109325bg-01(3)}\n\\end{center}",
+         "\\begin{center}\n\\includegraphics[max width=\\textwidth]{2024_03_08_77386ce5bfd05109325bg-01}\n\\end{center}"
+      ],
+      "answer": "1"
+   },
+   {
+      "question": "A uniform and homogeneous rod has resistance R. If rod is cut into 5 equal parts and connected in parallel find equivalent resistance?\n\n\n",
+      "options": [],
+      "answer": "$\\frac{\\mathrm{R}}{25}$"
+   }
+]
