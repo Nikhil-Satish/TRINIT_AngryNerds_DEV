@@ -69,11 +69,10 @@ convert_text_to_tags(paper)
 
 json_paper = json.dumps(paper, indent=2)
 
-json_paper = json_paper.replace("\"<Latex>", "<Latex>")
-json_paper = json_paper.replace("</Latex>\"", "</Latex>")
+json_paper = json_paper.replace("\"<Latex>{\\\"", "<Latex displayMode={true} minRuleThickness={0.05}>{\"")
+json_paper = json_paper.replace("\\\"}</Latex>\"", "\"}</Latex>")
 
-json_paper = re.sub(r"\n[\n]+", "", json_paper)
-json_paper = re.sub(r"\\([^a-zA-Z\\])", r"\1", json_paper)
+# json_paper = re.sub(r"\\([^a-zA-Z\\])", r"\1", json_paper)
 
 with open(f"./output/{sys.argv[1].split('/')[-1][:-3]}json", 'w') as fh:
     fh.write(json_paper)

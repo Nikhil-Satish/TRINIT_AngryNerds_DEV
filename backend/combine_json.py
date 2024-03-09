@@ -10,6 +10,7 @@ def read_files(directory):
 
     return text.replace('\n][', ',')
 
-combined = "export const questions_list = " + read_files("./output/")
+combined = "import Latex from \"react-latex\";\nexport const questions_list = " + read_files("./output/")
+
 with open("./src/Questions.js", "w") as fh:
     fh.write(combined)
