@@ -19,6 +19,16 @@ def get_question_option_answer_from_text(file_url):
     command = f"cat {file_url} | awk '/begin{{enumerate}}/,/Ans/'"
     text = capture_command_output(command).split("\\begin{enumerate}")[1:]
     return trim_output(text)
+
+def convert_images_to_tags(question_paper):
+    text = r"\\begin{center}\n\\includegraphics.*{(.*)}\n\\end{center}"
+    result = r"<img src='images/\1' alt='question \1' class='question' />"
+
+    for question_option_answer in question_paper:
+        question_option_answer['question'] = re.sub(text, result, question_option_answer['question'])
+
+        for i, option in enumerate(question_option_answer['options']):
+            question_option_answer['options'][i] = re.sub(text, result, option)
     
 def build_question_paper(file_url):
     question_paper = []
@@ -51,10 +61,12 @@ def build_question_paper(file_url):
 
         question_paper.append(question_option_answer)
 
-    return json.dumps(question_paper, indent=2)
+    return question_paper
 
 paper = build_question_paper(sys.argv[1])
-# print(paper)
+convert_images_to_tags(paper)
+
+json_paper = json.dumps(paper, indent=2)
 
 with open(f"../output/{sys.argv[1].split('/')[-1][:-3]}json", 'w') as fh:
-    fh.write(paper)
+    fh.write(json_paper)
