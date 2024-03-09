@@ -1,10 +1,12 @@
-// import Latex from "react-latex"
+import Latex from "react-latex"
 export const questions_list = [
   {
     "question": "Which of the following has maximum magnetic moment?",
     "options": [
         // <Latex>{"$3 d^{3}$"}</Latex>,
       "$3 d^{3}$",
+        // <Latex>{"$3 d^{3}$"}</Latex>,
+
       "$3 d^{6}$",
       "$3 \\mathrm{~d}^{7}$"
     ],
