@@ -9,6 +9,7 @@ const Timer = () => (
     size={90}
     colors={['#004777', '#F7B801', '#A30000', '#A30000']}
     colorsTime={[300, 60, 15, 0]}
+    // onComplete={}
   >
   
     {/* {({ remainingTime }) => remainingTime} */}

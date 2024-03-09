@@ -1,21 +1,32 @@
-/* .quest{
-    column-count: 3;
-} */
-/* .test-interface{
-    padding-left: 10%;
-} */
+.test-interface{
+    width: 50%;
+    padding-left: 25%;
+    padding-right: 30%;
+    padding-top: 10%;
+}
+.timer{
+    float: right;
+    padding-right: 10%;
+  }
+.crux{
+    width: 70%;
+    padding-left: 25%;
+}
+.quest{
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+}
 .prev-button{
     float: left;
-    padding-left: 30%;
+    /* padding-left: 30%; */
 }
 .next-button{
     float: right;
-    padding-right: 30%;
+    /* padding-right: 30%; */
 }
 .submit-button{
     float: right;
-    padding-right: 30%;
+    /* padding-right: 30%; */
 }
-/* .options{
-    text-align: left;
-} */
