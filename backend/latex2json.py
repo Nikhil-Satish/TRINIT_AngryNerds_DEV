@@ -68,5 +68,5 @@ convert_images_to_tags(paper)
 
 json_paper = json.dumps(paper, indent=2)
 
-with open(f"../output/{sys.argv[1].split('/')[-1][:-3]}json", 'w') as fh:
+with open(f"./output/{sys.argv[1].split('/')[-1][:-3]}json", 'w') as fh:
     fh.write(json_paper)

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+python3 ./backend/latex2json.py ./input/phy.tex
+python3 ./backend/latex2json.py ./input/chem.tex
+python3 ./backend/latex2json.py ./input/math.tex
+
+python3 ./backend/combine_json.py
