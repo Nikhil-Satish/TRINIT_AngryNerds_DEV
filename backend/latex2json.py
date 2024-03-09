@@ -20,7 +20,7 @@ def get_question_option_answer_from_text(file_url):
     text = capture_command_output(command).split("\\begin{enumerate}")[1:]
     return trim_output(text)
 
-def convert_images_to_tags(question_paper):
+def convert_text_to_tags(question_paper):
     text = r"\\begin{center}\n\\includegraphics.*{(.*)}\n\\end{center}"
     result = r"<img src='images/\1' alt='question \1' class='question' />"
 
@@ -28,7 +28,8 @@ def convert_images_to_tags(question_paper):
         question_option_answer['question'] = re.sub(text, result, question_option_answer['question'])
 
         for i, option in enumerate(question_option_answer['options']):
-            question_option_answer['options'][i] = re.sub(text, result, option)
+            temp = re.sub(text, result, option)
+            question_option_answer['options'][i] = f"<Latex>{{{temp}}}</Latex>"
     
 def build_question_paper(file_url):
     question_paper = []
@@ -64,7 +65,7 @@ def build_question_paper(file_url):
     return question_paper
 
 paper = build_question_paper(sys.argv[1])
-convert_images_to_tags(paper)
+convert_text_to_tags(paper)
 
 json_paper = json.dumps(paper, indent=2)
 
