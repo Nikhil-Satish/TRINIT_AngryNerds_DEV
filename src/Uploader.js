@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import axios from 'axios';
 
 function Uploader() {
 
@@ -22,10 +21,6 @@ const handleUpload = async () => {
           method: "POST",
           body: formData,
         });
-  
-        const data = await result.json();
-  
-        console.log(data);
       } catch (error) {
         console.error(error);
       }
