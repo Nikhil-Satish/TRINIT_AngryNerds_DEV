@@ -21,8 +21,9 @@ def get_question_option_answer_from_text(file_url):
     return trim_output(text)
 
 def convert_text_to_tags(question_paper):
-    text = r"\\begin{center}\n\\includegraphics.*{(.*)}\n\\end{center}"
-    result = r"<img src='images/\1' alt='question \1' class='question' />"
+    text = r"\\begin{center}\n(\\includegraphics.*){(.*)}\n\\end{center}"
+    # result = r"<img src='images/\1' alt='question \1' class='question' />"
+    result = r"\1{images/\2}"
 
     for question_option_answer in question_paper:
         question_option_answer['question'] = re.sub(text, result, question_option_answer['question'])
@@ -69,7 +70,7 @@ convert_text_to_tags(paper)
 
 json_paper = json.dumps(paper, indent=2)
 
-json_paper = json_paper.replace("\"<Latex>{\\\"", "<Latex displayMode={true} minRuleThickness={0.05}>{\"")
+json_paper = json_paper.replace("\"<Latex>{\\\"", "<Latex>{\"")
 json_paper = json_paper.replace("\\\"}</Latex>\"", "\"}</Latex>")
 
 # json_paper = re.sub(r"\\([^a-zA-Z\\])", r"\1", json_paper)
