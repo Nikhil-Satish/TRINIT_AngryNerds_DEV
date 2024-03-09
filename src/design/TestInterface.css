@@ -1,32 +1,35 @@
-.test-interface{
-    width: 50%;
-    padding-left: 25%;
-    padding-right: 30%;
-    padding-top: 10%;
+body {
+  color: #ddd;
+  background-color: #300a24;
 }
-.timer{
+
+.question-box {
+  width: 60vw;
+  height: 50vh;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+}
+
+.timer {
     float: right;
     padding-right: 10%;
-  }
-.crux{
-    width: 70%;
-    padding-left: 25%;
+} 
+
+.option {
+   margin: 10px;
 }
-.quest{
-    width: 100%;
+
+.option > input {
+   margin: 10px;
 }
-ul{
+
+ul {
     list-style-type: none;
 }
-.prev-button{
-    float: left;
-    /* padding-left: 30%; */
-}
-.next-button{
-    float: right;
-    /* padding-right: 30%; */
-}
-.submit-button{
-    float: right;
-    /* padding-right: 30%; */
+
+.submit-button {
+  margin: 40px;
 }

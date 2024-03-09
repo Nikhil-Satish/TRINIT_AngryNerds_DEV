@@ -3,7 +3,6 @@ import React from 'react';
 // import Timer from './Timer';
 import TestInterface from './TestInterface';
 // import { TestInterface } from './TestInterface';
-import './design/App.css'
 // import { MathJaxContext } from 'better-react-mathjax';
 
 function App() {
