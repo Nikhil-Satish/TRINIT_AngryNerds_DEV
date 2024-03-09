@@ -7,6 +7,15 @@ import Analysis from "./Analysis";
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 // import { MathJax } from "better-react-mathjax";
 import Latex from "react-latex";
+// import Button from 'react-bootstrap/Button';
+
+// import 'bootstrap/dist/css/bootstrap.min.css'; 
+// import $ from 'jquery'; 
+// import Popper from 'popper.js'; 
+// // import 'bootstrap/dist/js/bootstrap.bundle.min';
+// import bootstrapBundleMin from "bootstrap/dist/js/bootstrap.bundle.min";
+
+
 
 function TestInterface(){
     const [current_q, set_q] = useState(0);
@@ -143,6 +152,7 @@ function TestInterface(){
                             </div>
                             <div className="next-button">
                                 <button onClick={handleNextClick} >Save and Next</button>
+                                {/* <Button variant="primary">Primary</Button> */}
                                 {/* <Analysis anslist="Lolol" /> */}
                             </div>
                             
@@ -152,6 +162,7 @@ function TestInterface(){
 
                         <div className="submit-button">
                             <button onClick={handleSubmit} >Submit</button>
+                            {/* <button type="button" class="btn btn-primary">Primary</button> */}
                         </div>
                     </div>
                 </div>
