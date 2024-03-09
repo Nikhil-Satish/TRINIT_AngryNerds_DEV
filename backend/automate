@@ -1,11 +1,21 @@
 #!/bin/bash
 
-mkdir ./output
+# a temporary directory for all our temporary files
+if [ ! -d ./output ]; then
+	mkdir ./output
+fi
 
-python3 ./backend/latex2json.py ./input/phy.tex
-python3 ./backend/latex2json.py ./input/chem.tex
-python3 ./backend/latex2json.py ./input/math.tex
+for i in {math,}; do
+	yes y | unzip ./src/input/$i.zip -d ./output/
+	python3 ./backend/move_files.py $i
+done
 
-python3 ./backend/combine_json.py
-
-rm -rf ./output/
+#
+# python3 ./backend/latex2json.py ./src/input/phy.tex
+# python3 ./backend/latex2json.py ./src/input/chem.tex
+# python3 ./backend/latex2json.py ./src/input/math.tex
+#
+# python3 ./backend/combine_json.py
+#
+# remove the temporary directory
+# rm -rf ./output/
