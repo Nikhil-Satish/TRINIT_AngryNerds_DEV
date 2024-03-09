@@ -1,3 +1,4 @@
+// import Latex from "react-latex"
 export const questions_list = [
   {
     "question": "Which of the following has maximum magnetic moment?",

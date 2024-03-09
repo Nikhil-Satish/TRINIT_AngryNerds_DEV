@@ -4,20 +4,21 @@ import React from 'react';
 import TestInterface from './TestInterface';
 // import { TestInterface } from './TestInterface';
 import './design/App.css'
+// import { MathJaxContext } from 'better-react-mathjax';
 
 function App() {
   return (
-    <div className="App">
-      <h2>Online Testing Platform</h2>
-      <div className='main-area'>
-        {/* <div className='timer'>
-          <Timer />
-        </div> */}
-        <div className='inter' >
-          <TestInterface />
+      <div className="App">
+        <h2>Online Testing Platform</h2>
+        <div className='main-area'>
+          {/* <div className='timer'>
+            <Timer />
+          </div> */}
+          <div className='inter' >
+            <TestInterface />
+          </div>
         </div>
       </div>
-    </div>
   );
 }
 
