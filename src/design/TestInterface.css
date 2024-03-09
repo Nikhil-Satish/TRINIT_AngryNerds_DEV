@@ -4,8 +4,9 @@ body {
 }
 
 .question-box {
+  margin: -20px;
   width: 60vw;
-  height: 40vh;
+  height: 50vh;
 }
 
 .navigation {

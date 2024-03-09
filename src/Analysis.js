@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import answer_key from "./AnswerKey";
 import { questions_list } from "./Questions";
+import { PieChart } from "react-minimal-pie-chart";
 
 function Analysis(props){
     const answer_entered = props.anslist;
@@ -42,7 +43,8 @@ function Analysis(props){
       }, []);
 
     return(
-        <div className="container table-responsive">
+      <div className="container">
+        <div className="table-responsive">
             <table className="mx-auto table w-auto table-bordered">
                 <tbody>
                     <tr className="table-info">
@@ -62,6 +64,20 @@ function Analysis(props){
                 </tbody>
             </table>
         </div>
+
+        <div>
+            <PieChart className="pie"
+                data={[
+                    { title: "Correct", value: correctly_ans, color: '#00ff00' },
+                    { title: "Incorrect", value: incorrectly_ans, color: '#ff0000' },
+                    { title: "Unattempted", value: unatt, color: '#777' },
+                ]}
+                animate
+                animateDuration={40}
+                radius={20}
+            />
+        </div>
+      </div>
     )
 }
 
