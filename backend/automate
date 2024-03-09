@@ -1,11 +1,12 @@
 #!/bin/bash
 
+# a temporary directory for all our temporary files
 if [ ! -d ./output ]; then
 	mkdir ./output
 fi
 
 for i in {phy,math,chem}; do
-	# a temporary directory for all our temporary files
+	# a temporary directory for unzipped contents of zip files
 	if [ ! -d ./zip ]; then
 		mkdir ./zip
 	fi
