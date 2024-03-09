@@ -18,8 +18,6 @@ def trim_output(questions):
 def get_question_option_answer_from_text(file_url):
     command = f"cat {file_url} | awk '/begin{{enumerate}}/,/Ans/'"
     text = capture_command_output(command).split("\\begin{enumerate}")[1:]
-    # for i, q in enumerate(text):
-    #     print(f"{i}: {q}", end='\n')
     return trim_output(text)
     
 def build_question_paper(file_url):
@@ -56,4 +54,7 @@ def build_question_paper(file_url):
     return json.dumps(question_paper, indent=3)
 
 paper = build_question_paper(sys.argv[1])
-print(paper)
+# print(paper)
+
+with open(f"../output/{sys.argv[1].split('/')[-1][:-3]}json", 'w') as fh:
+    fh.write(paper)
