@@ -68,6 +68,8 @@ paper = build_question_paper(sys.argv[1])
 convert_text_to_tags(paper)
 
 json_paper = json.dumps(paper, indent=2)
+json_paper = json_paper.replace("\"<Latex>", "<Latex>")
+json_paper = json_paper.replace("</Latex>\"", "</Latex>")
 
 with open(f"./output/{sys.argv[1].split('/')[-1][:-3]}json", 'w') as fh:
     fh.write(json_paper)
