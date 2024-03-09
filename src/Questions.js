@@ -6,5 +6,9 @@ export const questions_list = [
     {
         question:"Who was the first person to step on moon?",
         options:["Neil Armstrong","Buzz Alderin","Sarojini Naidu","Albert Einstein"]
+    },
+    {
+        question:"Who invented linux?",
+        options:["Isaac Newton","Linus Torvalds","Bill gates","Steve Jobs"]
     }
 ]
