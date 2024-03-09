@@ -17,9 +17,54 @@ function TestInterface(){
         anslist.push(5);
         ts.push(0);
     }
+    // const string_to_html = (str) =>{
+    //     const parser = new DOMParser()
+    //     // const html = parser.parseFromString("<Latex>{\"$3 d^{3}$\"}</Latex>",'text/html');
+    //     const html = parser.parseFromString(str,'text/html');
+    //     return html.body;
+    // }
+    // var opts = [];
+    // for(i = 0;i<questions_list.length;i++){
+    //     var choices = questions_list[i].options;
+    //     if(choices.length === 0){
+    //         // opts.push([]);
+    //     }
+    //     else{
+    //         // opts.push()
+    //         for(var j = 0;j<choices.length;j++){
+    //             var opt = choices[j];
+    //             var opt_new = string_to_html(opt);
+    //             // opts.push(opt_new);
+    //             opts = [
+    //                 ...opts, opt_new
+    //             ]
+    //         }
+    //     }
+    // }
+    // const [options, setOptions] = useState(opts);
     const [answers_entered, setAnswers] = useState(anslist);
     // const [time_spent, setTimeSpent] = useState(ts);
 
+    
+
+    // const updateOptions = () =>{
+    //     const opts = [];
+    //     for(var i = 0;i<questions_list.length;i++){
+    //         choices = questions_list[i].options;
+    //         if(choices.length === 0){
+    //             opts.push([]);
+    //         }
+    //         else{
+    //             // opts.push()
+    //             for(var j = 0;j<choices.length;j++){
+    //                 var opt = choices[j];
+    //                 var opt_new = string_to_html(opt);
+    //                 opts.push(opt_new);
+    //             }
+    //         }
+    //     }
+    //     return opts;
+    // }
 
     const [submitted, setSubmit] = useState(false);
 
@@ -103,6 +148,12 @@ function TestInterface(){
                             <div className="crux">
                                 {/* <Latex>{questions_list[current_q].question}</Latex> */}
                                 {/* <p>{q_no}{questions_list[current_q].question}</p> */}
+                                {/* <p>{opts[0]}</p> */}
+                                {/* <ul>
+                                    {opts.map((option, optionIndex) =>{
+
+                                    })}
+                                </ul> */}
                                 <p>{q_no}<Latex>{questions_list[current_q].question}</Latex></p>
                                 <br/>
                                 <ul className="options">
