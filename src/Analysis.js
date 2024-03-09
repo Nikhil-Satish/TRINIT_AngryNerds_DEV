@@ -24,7 +24,7 @@ function Analysis(props){
                     }
                 }
                 else{
-                    if(answer_entered[i] === questions_list[i].answer){
+                    if(answer_entered[i] === questions_list[i].answer.toString()){
                         corr+=1;
                     }
                     // else if(answer_entered === 5){
