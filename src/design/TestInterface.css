@@ -1,12 +1,14 @@
 body {
-  color: #ddd;
-  background-color: #300a24;
+  color: black;
+  background-color: lightcyan;
 }
 
 .question-box {
   margin: -20px;
   width: 60vw;
   height: 50vh;
+  padding-left: 18%;
+  padding-top: 10%;
 }
 
 .navigation {
@@ -16,7 +18,7 @@ body {
 
 .timer {
     float: right;
-    padding-right: 10%;
+    padding-right: 5%;
 } 
 
 .option {
@@ -33,4 +35,7 @@ ul {
 
 .submit-button {
   margin: 40px;
+  /* padding-left: 60%;
+  padding-top: 10%; */
+  /* float: right; */
 }
