@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={
-          <div>
+          <div style={{'padding':'5%'}}>
             <Uploader />
             <Link to="/test">Start the test</Link>
           </div>
@@ -26,7 +26,7 @@ function App() {
         <Route 
         path='/test' element={
           <div>
-            <h1 style={{textAlign: 'center', margin: 10}}>Online Testing Platform</h1>
+            <h1 style={{textAlign: 'center', margin: 10}}>JEE Mock Test</h1>
             <div className='main-area'>
               <div className='inter' >
                 <TestInterface />
