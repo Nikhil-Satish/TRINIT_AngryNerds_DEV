@@ -2,10 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -13,6 +9,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## The Frontend
+
+The frontend of the app was developed using ReactJS. Once the zip file is uploaded, the backend outputs a Question.js file which contains an array of questions (and in this case, along with the answers to evaluate). React-Latex has been used to render the latex content onto the display. The user can navigate back and forward and his answers will be recorded on clicking 'Save and Next'. There is a timer that auto-submits once the duration expires. Upon submission, the user will be redirected to the Analysis page where they can find their score and basic analytics. 
 
 ### `npm test`
 
