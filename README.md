@@ -30,7 +30,7 @@ Now the user can upload a zip file containing the latex file on the server and g
 
 ## The Frontend
 
-The frontend of the app was developed using ReactJS. Once the zip file is uploaded, the backend outputs a [Question.js](src/Question.js) file which contains an array of questions (and in this case, along with the answers to evaluate). React-Latex has been used to render the latex content onto the display. The user can navigate back and forward and his answers will be recorded on clicking 'Save and Next'. There is a timer that auto-submits once the duration expires. Upon submission, the user will be redirected to the Analysis page where they can find their score and basic analytics. 
+The frontend of the app was developed using ReactJS. Once the zip file is uploaded, the backend outputs a [Questions.js](src/Questions.js) file which contains an array of questions (and in this case, along with the answers to evaluate). React-Latex has been used to render the latex content onto the display. The user can navigate back and forward and his answers will be recorded on clicking 'Save and Next'. There is a timer that auto-submits once the duration expires. Upon submission, the user will be redirected to the Analysis page where they can find their score and basic analytics. 
 
 MathPix returns the output in a zip file containing the latex as well as the images extracted from the pdf, so our entry point is this zip. From there, we have automated the entire further process.
 
