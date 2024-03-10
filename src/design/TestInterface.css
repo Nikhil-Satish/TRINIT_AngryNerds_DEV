@@ -4,7 +4,8 @@ body {
 }
 
 .question-box {
-  margin: -20px;
+  margin-bottom: 30px;
+  padding: 20px;
   width: 60vw;
   height: 50vh;
   padding-left: 18%;
