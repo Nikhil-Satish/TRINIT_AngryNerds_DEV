@@ -3,15 +3,11 @@
 ## Video Link
 [Click here](https://drive.google.com/file/d/1guGRe-9-HXKDCrGpuvjxPeia6ak_4X5r/view?usp=drive_link)
 
-<<<<<<< HEAD
 ## Introduction
 
 This application takes in a zip file (which is obtained from the pdf using a website) containing the LaTeX of the paper as well as images in it. We will explain why we have chosen this format, as well as why we cannot do with uploading a PDF directly.
 
 ## PDF to LaTeX
-=======
-### `npm start`
->>>>>>> 3693824c3aae2d95ff6e0b4edd015389a55a4970
 
 The first part of the problem statement requires us to extract the text out of the PDF of the question paper. Now, many of the questions, especially those in mathematics, have complex equations which cannot be captured easily in a direct PDF to text conversion. Therefore, we decided that instead of converting to text, we will convert the PDF to LaTeX.
 
