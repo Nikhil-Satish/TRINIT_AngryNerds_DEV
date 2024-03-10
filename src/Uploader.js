@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './design/Uploader.css'
 
 function Uploader() {
 
@@ -30,7 +31,8 @@ const handleUpload = async () => {
   return (
     <div className="upload-file">
         <form onSubmit={handleUpload} encType='multipart/form-data'>
-          <h1>React File Upload</h1>
+          <h2>Upload test zip</h2>
+          <br/>
           <input type="file" onChange={handleChange} name='trial.zip'/>
           <button type="submit">Upload</button>
         </form>

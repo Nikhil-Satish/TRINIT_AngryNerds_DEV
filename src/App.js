@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={
-          <div>
+          <div style={{'padding':'5%'}}>
             <Uploader />
             <Link to="/test">Start the test</Link>
           </div>
