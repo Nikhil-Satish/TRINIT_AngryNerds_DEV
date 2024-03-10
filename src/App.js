@@ -1,6 +1,6 @@
 import React from 'react';
 import TestInterface from './TestInterface';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Uploader from './Uploader';
 
 function App() {
@@ -13,9 +13,15 @@ function App() {
       //     </div>
       //   </div>
       // </div>
+      
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Uploader />}>
+        <Route path="/" element={
+          <div>
+            <Uploader />
+            <Link to="/test">Start the test</Link>
+          </div>
+        }>
         </Route>
         <Route 
         path='/test' element={
@@ -30,7 +36,7 @@ function App() {
         }
         ></Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> 
   );
 }
 
